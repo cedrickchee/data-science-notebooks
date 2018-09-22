@@ -71,6 +71,7 @@ You can read more about using conda environments in the [Managing Environments](
 |Notebook|Description|
 | --- | --- |
 | [Deep Painterly Harmonization](/notebooks/deep_learning/deep_painterly_harmonization/harmonization.ipynb) | Implement [Deep Painterly Harmonization paper](https://arxiv.org/abs/1804.03189) in PyTorch |
+| [Language modelling in Malay language for downstream NLP tasks](/notebooks/deep_learning/ULMFiT/malay_language_model.ipynb) | Implement [Universal Language Model Fine-tuning for Text Classification (ULMFiT)](http://nlp.fast.ai/classification/2018/05/15/introducting-ulmfit.html) in PyTorch |
 
 ### DL Assignments, Exercises or Course Works
 

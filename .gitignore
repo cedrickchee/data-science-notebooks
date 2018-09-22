@@ -104,4 +104,8 @@ venv.bak/
 .mypy_cache/
 
 # datasets
-/data
+data/
+
+# libraries symlinks
+fastai
+wikiextractor/

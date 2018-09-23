@@ -65,7 +65,6 @@ The weights (model state dict) and the optimizer state for the model were saved 
 
 _Note: the model was last trained on 2018-09-22 and the weights last updated on 2018-09-22._
 
-
 ## Inference
 
 ### Test 1: Generate text using the language model
@@ -106,9 +105,44 @@ Generate sentences using some random strings. Examples:
 
 I am still trying to find curated or publicly available dataset for Malay corpus. Therefore, I can't provide a benchmark for text classification yet.
 
+**Updates:**
+- 2018-09-23 17:30 GMT+8: Found some curated Malay corpus dataset from these academic papers:
+  - [Malay sentiment analysis based on combined classification approaches and Senti-lexicon algorithm. Al-Saffar, A. et al. (2018).](https://doi.org/10.1371/journal.pone.0194852)
+    - "... In experimental results, a wide-range of comparative experiments is conducted on a Malay Reviews Corpus (MRC) ..."
+    - "... Data Availability: All (MCR) Data set files are available from (DOI: [10.13140/RG.2.2.33420.72320](https://doi.org/10.13140/RG.2.2.33420.72320)). ..."
+  - [Experiments on malay short text classification. Tiun, S. (2017).](https://doi.org/10.1109/ICEEI.2017.8312371)
+    - "... A Malay short text dataset was developed based on tweets from Twitter data and classified into two separate classes. ..."
+  - [Reviewing Classification Approaches in Sentiment Analysis. Yusof, N. N. et al. (2015)](https://doi.org/10.1007/978-981-287-936-3_5).
+    - "... 2000 reviews from online Malay social media and blogs. 1000 positive and 1000 negative reviews. ..."
+  - [Study on Feature Selection and Machine Learning Algorithms For Malay Sentiment Classification. Alsaffar, A. et al. (2014)](https://doi.org/10.1109/icimu.2014.7066643)
+    - "... All models are evaluated on the basis of an opinion corpus for Malay (OCM), which was collected from a variety of Web pages about reviews in the Malay language. ..."
+  - [Improving Accuracy in Sentiment Analysis for Malay Language. Arun A. (2016)](https://www.researchgate.net/publication/312068405_Improving_Accuracy_in_Sentiment_Analysis_for_Malay_Language)
+    - "... Dataset used was opinion corpus for Malay (OCM), which was collected from a variety of Web pages about reviews in the Malay language. ...."
+  - [Sentiment Analysis of Malay Social Media Text. Khalifa C. et al. (2018)](https://doi.org/10.1007/978-981-10-8276-4_20)
+    - "... RojakLex lexicon was constructed consists of 4 different lexicons combined together, namely (1) MySentiDic: a Malay lexicon, (2) English Lexicon: Translated version of MySentiDic, (3) Emoticon lexicon: a combination of 9 different well known lists of commonly used online emoticons, (4) Neologism lexicon: consists of common neologism words used in Malay social media text. ..."
+  - [Enhanced Malay sentiment analysis with an ensemble classification machine learning approach. Al-Moslmi, T. et al. (2017)](https://ukm.pure.elsevier.com/en/publications/enhanced-malay-sentiment-analysis-with-an-ensemble-classification)
+    - "... A wide range of ensemble experiments are conducted on a Malay Opinion Corpus (MOC). ..."
+
+From a quick literature review through these papers, it looks like the common corpus used was the Malay Opinion Corpus (MOC). I have checked that Malay Reviews Corpus (MRC) is the same as MOC. This corpus contains 2000 movie reviews collected from different web pages and blogs in Malay; 1000 of them are considered positive reviews, and the other 1000 are considered negative. It's a small dataset. There's another not so common corpus known as RojakLex and I think this should be a larger corpus. I have contacted the paper's first author to see if it is possible to get a copy of this corpus.
+
 ## TODO
 
-- [ ] Finetune language model for text classification task
+- [x] Download and extract Malay Wikipedia corpus
+- [x] Process text (clean and tokenize text)
+- [x] Create train and validation set
+- [x] Create data loader for training
+- [x] Numericalize the text
+- [x] AWD-LSTM model setup
+- [x] Train model
+- [x] Tune hyper-paramters
+- [x] Evaluate language model
+- [ ] Bug fixes
+  - [ ] Figure out why the model state that's being reset before every inference is remembering the previous generated sentences
+- [ ] Fine-tune language model for text classification task
+- [ ] Build model for text classification
+- [ ] Find curated or publicly available labelled dataset for Malay corpus
+- [ ] Create my own dataset by curating and labelling Malay text scrapped from news sites
+- [ ] Benchmark model for text classification
 - [ ] Use continuous cache pointer (from here: https://github.com/salesforce/awd-lstm-lm)
 - [ ] Try QRNN (from here: https://github.com/salesforce/pytorch-qrnn/)
 - [ ] Identify new datasets for sentiment analysis

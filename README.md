@@ -144,7 +144,9 @@ _WIP_
 
 ### [TensorFlow](/notebooks/tensorflow/index.ipynb)
 
-_WIP_
+|Notebook|Description|
+| --- | --- |
+| [Guide to TensorFlow Keras on TPUs MNIST](/notebooks/tensorflow/google_cloud_tpu/guide_to_tensorflow_keras_on_tpu_mnist.ipynb) | Guide to TensorFlow + Keras on TPU v2 for free on Google Colab |
 
 ### [Keras](/notebooks/keras/index.ipynb)
 

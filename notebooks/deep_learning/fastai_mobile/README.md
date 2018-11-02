@@ -4,11 +4,14 @@
 
 - [Android Camera app demo (video)](https://youtu.be/TYkoaVNCMos)
 
-**Guides**
+**Guide - How I Shipped a Neural Network on Android/iOS Phones with PyTorch and Android Studio/Xcode**
 
-- Learn how to ship SqueezeNet from PyTorch to Caffe2 + Android app. Please take a look at this [notebook](shipping_squeezenet_from_pytorch_to_android.ipynb).
-  - Android project for AI Camera app tutorial in this [notebook](shipping_squeezenet_from_pytorch_to_android.ipynb#Fast.ai-Mobile-Camera-Project).
-- Get started with an introduction to [Open Neural Network Exchange formst (ONNX)](https://onnx.ai/) in this Jupyter [notebook](onnx_from_pytorch_to_caffe2.ipynb).
+I'll walk you through every step, from problem all the way to building and deploying the Android/iOS app to mobile phones.
+
+- Learn how to ship SqueezeNet from PyTorch to Caffe2 + Android/iOS app. Please take a look at this [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb).
+  - Android project for AI Camera app tutorial in this [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb#Fast.ai-Mobile-Camera-Project).
+  - iOS project (TBD)
+- Get started with an introduction to [Open Neural Network Exchange formst (ONNX)](https://onnx.ai/) in this Jupyter [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/onnx_from_pytorch_to_caffe2.ipynb).
 
 ---
 
@@ -18,15 +21,15 @@ This work is part of our project while studying [fast.ai's Deep Learning for Cod
 
 The idea for this project originated from [Sanyam (init27)](https://forums.fast.ai/u/init_27)'s Not Hotdog mobile app idea while we were looking for possible projects which we can take on together or even individually. At the point during our discussions, we realized that shipping a neural network on iOS with CoreML with PyTorch is really a painful experience. Just take a look at this blog post, ["How I Shipped a Neural Network on iOS with CoreML, PyTorch, and React Native"](https://attardi.org/pytorch-and-coreml) written by Stefano J. Attardi to understand the state and scale of this problem. We are motivated by the size of the problem and the potentials, for example, [developers are offering consulting services to convert neural networks to run on mobile devices](http://machinethink.net/faster-neural-networks/).
 
-### Project Goal
-
-The plan: work on this project together and publish a blog post series.
+The details are available in our [**fast.ai Asia study group** pre-class meeting notes](https://hackmd.io/s/Sk5tydOjQ) on 2018-10-20 19:30 GMT+8.
 
 ## The Project
 
-Port SqueezeNet, a small CNN into mobile phone and build a simple Android and iOS app.
+We will port SqueezeNet or a small ConvNet in PyTorch into mobile phone and build a simple Android and iOS app.
 
-- High-level activities:
+- Project Goal
+  - **Work on this project together** in our virtual Asia study group and **publish a blog post series**.
+- High-level activities (plan):
   - Research and design an efficient Convolutional Neural Networks for on-device/mobile vision.
     - Design a mobile-first computer vision models for PyTorch, designed to effectively maximize accuracy while being mindful of the restricted resources for an on-device application—better than SqueezeNet!
     - Benchmark: SqueezeNet v1.1 vs. MobileNetV2 vs. Shufflenet

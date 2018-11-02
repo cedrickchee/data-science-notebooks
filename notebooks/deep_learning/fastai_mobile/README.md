@@ -94,6 +94,8 @@ Quick literature review:
 - [x] Resolve all issues related to Android Studio
 - [x] Android app demo
 - [ ] Research on newer mobile-first computer vision models (objective: inference speed above 30 fps)
+- [ ] iOS app
+- [ ] Research on improving model accuracy
 
 ## License
 

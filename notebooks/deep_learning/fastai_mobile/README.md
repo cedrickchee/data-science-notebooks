@@ -11,7 +11,9 @@ I'll walk you through every step, from problem all the way to building and deplo
 - Learn how to ship SqueezeNet from PyTorch to Caffe2 + Android/iOS app. Please take a look at this [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb).
   - Android project for AI Camera app tutorial in this [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb#Fast.ai-Mobile-Camera-Project).
   - iOS project (TBD)
-- Get started with an introduction to [Open Neural Network Exchange formst (ONNX)](https://onnx.ai/) in this Jupyter [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/onnx_from_pytorch_to_caffe2.ipynb).
+- Get started with an introduction to [Open Neural Network Exchange format (ONNX)](https://onnx.ai/) in this Jupyter [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/onnx_from_pytorch_to_caffe2.ipynb).
+
+[Source code for the Android app](https://github.com/cedrickchee/pytorch-android).
 
 ---
 
@@ -96,6 +98,11 @@ Quick literature review:
 - [ ] Research on newer mobile-first computer vision models (objective: inference speed above 30 fps)
 - [ ] iOS app
 - [ ] Research on improving model accuracy
+- [x] Open source the Android project source code
+- [ ] Write blog post
+- [ ] Fix crashes
+- [ ] Resolve new issues
+- [ ] Make it easier to test with your own deep neural network/model
 
 ## License
 

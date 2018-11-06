@@ -8,12 +8,24 @@
 
 I'll walk you through every step, from problem all the way to building and deploying the Android/iOS app to mobile phones.
 
-- Learn how to ship SqueezeNet from PyTorch to Caffe2 + Android/iOS app. Please take a look at this [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb).
+Learn how to ship SqueezeNet from PyTorch to Caffe2 + Android/iOS app. Please follow the tutorials in order from top to bottom:
+1. Get started with an introduction to [Open Neural Network Exchange format (ONNX)](https://onnx.ai/) in this Jupyter [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/onnx_from_pytorch_to_caffe2.ipynb).
+2. Putting it all together. Ship a SqueezeNet from PyTorch to Android. Please take a look at this [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb).
   - Android project for AI Camera app tutorial in this [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb#Fast.ai-Mobile-Camera-Project).
-  - iOS project (TBD)
-- Get started with an introduction to [Open Neural Network Exchange format (ONNX)](https://onnx.ai/) in this Jupyter [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/onnx_from_pytorch_to_caffe2.ipynb).
+3. Ship a SqueezeNet from PyTorch to iOS (TBD).
 
 [Source code for the Android app](https://github.com/cedrickchee/pytorch-android).
+
+**Updates:**
+
+- 2018-11-05:
+  - Notebooks updated with clearer instructions. Added ONNX installation problems, how to troubleshoot and fix the problems.
+- 2018-11-06:
+  - Android app crashed when we tested with ResNet18 or other networks with the error in Android Studio: "android A/libc Fatal signal 6 (SIGABRT), code -6 ...". Related [GitHub issue](https://github.com/bwasti/AICamera/issues/37)
+  - We think we have idendified the bottleneck is in this step in the notebook under this section: ["Export the model to run on mobile devices"](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb#Export-the-model-to-run-on-mobile-devices), where ONNX-Caffe2 backend rewrite ONNX graph to Caffe2 NetDef.
+  - Please bear with us. Our response might be delayed as everyone in our team is currently busy:
+    - ironing out all the kinks that slow down the shipping process
+    - to get the iOS part done
 
 ---
 

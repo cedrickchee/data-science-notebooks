@@ -1,12 +1,10 @@
 # ULMFiT Language Model for Malay Language
 
-State-of-the-Art Language Modeling in Malay language with perplexity of 29.30245 on Malay Wikipedia.
+State-of-the-Art Language Modeling and text classifiction in Malay language with perplexity of **29.30245** on Malay Wikipedia and **77.5% accuracy** on [Malaya sentiment analysis](https://github.com/DevconX/Malaya/wiki/Models-Comparison#sentiment_analysis).
 
 ## The Project
 
 This directory contains relevant files for implementating ULMFiT language model by Jeremy Howard (fast.ai) and Sebastian Ruder applied to NLP tasks for the Malay language using the [Malay Wikipedia](https://ms.wikipedia.org) corpus.
-
----
 
 ### Background
 
@@ -16,36 +14,81 @@ I took this opportunity to implement [Universal Language Model Fine-tuning for T
 - how pre-training a full language model from scratch can greatly surpass previous approaches based on simple word vectors
 - transfer learning for NLP by using this language model to show a new state of the art result in text classification, in some sense like [NLP's ImageNet moment has arrived](http://ruder.io/nlp-imagenet/)
 
-### Project Goal
+---
 
-The goal of this project is to train Malay word embeddings using the fast.ai version of [AWD-LSTM Language Model](https://arxiv.org/abs/1708.02182) by Salesforce Research—basically LSTM with dropouts—with data from [Wikipedia](https://dumps.wikimedia.org/mswiki/20180901/mswiki-20180901-pages-articles.xml.bz2) (last updated Sept 2, 2018). The AWD-LSTM language model achieved the state of the art performance on the English language.
+## Malay Language Modeling
 
-Using 90/10 train-validation split, I achieved perplexity of **29.30245 with 60,002 embeddings at 400 dimensions**, compared to state-of-the-art as of June 12, 2018 at **40.68 for English WikiText-2 by [Yang et al (2017)](https://arxiv.org/abs/1711.03953)** and **29.2 for English WikiText-103 by [Rae et al (2018)](https://arxiv.org/abs/1803.10049)**. To the best of my knowledge, there is no comparable research in Malay language at the point of writing (Sept 21, 2018).
+The goal of this project is to train Malay word embeddings using the fast.ai version of [AWD-LSTM Language Model](https://arxiv.org/abs/1708.02182)—basically LSTM with dropouts—with data from [Wikipedia](https://dumps.wikimedia.org/mswiki/20180901/mswiki-20180901-pages-articles.xml.bz2) (last updated Sept 2, 2018). The AWD-LSTM language model achieved the state of the art performance on the English language.
+
+A state-of-the-art language modeling with perplexity of 29.30245 on Malay Wikipedia has been achieved compared to state-of-the-art as of June 12, 2018 at 40.68 for English WikiText-2 by [Yang et al (2017)](https://arxiv.org/abs/1711.03953) and 29.2 for English WikiText-103 by [Rae et al (2018)](https://arxiv.org/abs/1803.10049). Lower perplexity means better performance. Obviously, the perplexity of the language model on Malay Wikipedia can't be compared with both mentioned papers due to completely different dataset, but as reference, I hope it can be still useful. To the best of my knowledge, there is no comparable research in Malay language at the point of writing (Sept 21, 2018).
 
 My workflow is as follows:
 - Perform 90/10 train-validation split
+- Vocabulary size of 60,002 and embeddings at 400 dimensions
 - Minimal text cleaning and tokenization using our own tokenizer
 - Train language model
 - Evaluate model based on perplexity and eyeballing
 - Get embeddings of dataset from train set
 
-For the community to reuse the model directly, I am contributing the Jupyter notebook (and code) together with the pre-trained weights to the fast.ai model zoo.
+See [`malay_language_model.ipynb`](malay_language_model.ipynb) notebok for more details.
 
-Due to some challenges to find curated and publicly available dataset for Malay text, I can't provide a benchmark for text classification yet, but as soon as I can find one (please contact me if you have one), I will update my research.
+For the community to reuse the model directly, I am contributing the Jupyter notebook (and code) together with the pre-trained weights to the [fast.ai model zoo](https://forums.fast.ai/t/language-model-zoo-gorilla/14623).
 
-The language model can also be used to extract text features for other downstream tasks.
+~~Due to some challenges to find curated and publicly available dataset for Malay text, I can't provide a benchmark for text classification yet, but as soon as I can find one (please contact me if you have one), I will update my research.~~
+
+The language model can also be used to extract text features for other downstream tasks such as text classification and speech recognition.
+
+## Text Classification
+
+Since there is no other comparable Malay language model, we need to create a downstream task and compare its accuracy. A text classification was chosen for this purpose, but it is a big challenge to find curated or publicly available dataset for Malay text. Nevertheless, a small curated Malay dataset was found eventually. It is [Malaya, the NLP for bahasa Malaysia](https://github.com/DevconX/Malaya) dataset created by [DevCon Community](https://www.devcon.my/). It contains 277,225 words from [various online sources](https://github.com/DevconX/Malaya/tree/master/crawl) and Malaysia websites. The corpus has 2 categories:
+
+- Positive polarity
+- Negative polarity
+
+### Benchmark
+
+We will compare the performance and result of various models for sentiment analysis task.
+
+Source: [models comparison for Malaya sentiment analysis](https://github.com/DevconX/Malaya/wiki/Models-Comparison#sentiment_analysis)
+
+Model              | Metric        | Value
+------------------ | ------------- | ---------
+[Multinomial][1]   | Accuracy      | 0.73
+[XGBoost][2]       | Accuracy      | 0.71
+[Bahdanau][3]      | Accuracy      | 0.66
+[Bidirectional][4] | Accuracy      | 0.69
+[Luong][5]         | Accuracy      | 0.64
+[Hierarchical][6]  | Accuracy      | 0.70
+[fastText][7]      | Accuracy      | 0.71
+[**ULMFiT**][8]    | Accuracy      | **0.77**
+
+[1]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/multinomial-split.ipynb
+[2]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/xgb-split.ipynb
+[3]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/bahdanau-split.ipynb
+[4]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/bidirectional-split.ipynb
+[5]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/luong-split.ipynb
+[6]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/hierarchical-split.ipynb
+[7]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/fast-text-split.ipynb
+[8]: https://github.com/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/ULMFiT/malay_text_classification.ipynb
+
+It shows that text classification using ULMFiT outperforms other algorithms using classical machine learning or other neural network models.
 
 ## Dependencies
 
 - Python 3+ (tested with 3.6.5)
 - PyTorch 0.4+ (tested with 0.4.0)
-- fast.ai (pip install git+https://github.com/fastai/fastai.git@master#egg=fastai)
+- fast.ai 0.7.0 ([conda installation from source](https://forums.fast.ai/t/fastai-v0-7-install-issues-thread/24652))
 
 ## Version History
 
 ### v0.1
 
 - Pretrained language model based on Malay Wikipedia with the perplexity of 29.30245.
+
+### v0.2
+
+- Text classification implementation using [Malaya](https://github.com/DevconX/Malaya) [dataset](https://github.com/DevconX/Malaya/wiki/Dataset).
+- Text classification (sentiment analysis) benchmark of 77.5% accuracy [compared to 73% by Malaya for 2-label classification (positive or negative)](https://github.com/DevconX/Malaya/wiki/Models-Comparison#sentiment_analysis).
 
 ## Pre-trained model
 
@@ -101,30 +144,6 @@ Generate sentences using some random strings. Examples:
 - "Penyanyi terkenal"
   - penyanyi terkenal, penyanyi, penyanyi, penulis lagu, komposer, komposer, komposer, komposer, dan artis. lagu. lagu ini digubah oleh komposer terkenal, komposer terkenal, komposer terkenal, ahmad nawab. lagu ini digubah oleh ahmad nawab, dan liriknya ditulis oleh ahmad nawab. lagu ini digubah oleh ahmad nawab, dan liriknya ditulis oleh ahmad nawab. lagu ini digubah oleh ahmad nawab, dan dinyanyikan oleh p. ramlee.
 
-## Text Classification
-
-I am still trying to find curated or publicly available dataset for Malay corpus. Therefore, I can't provide a benchmark for text classification yet.
-
-**Updates:**
-- 2018-09-23 17:30 GMT+8: Found some curated Malay corpus dataset from these academic papers:
-  - [Malay sentiment analysis based on combined classification approaches and Senti-lexicon algorithm. Al-Saffar, A. et al. (2018).](https://doi.org/10.1371/journal.pone.0194852)
-    - "... In experimental results, a wide-range of comparative experiments is conducted on a Malay Reviews Corpus (MRC) ..."
-    - "... Data Availability: All (MCR) Data set files are available from (DOI: [10.13140/RG.2.2.33420.72320](https://doi.org/10.13140/RG.2.2.33420.72320)). ..."
-  - [Experiments on malay short text classification. Tiun, S. (2017).](https://doi.org/10.1109/ICEEI.2017.8312371)
-    - "... A Malay short text dataset was developed based on tweets from Twitter data and classified into two separate classes. ..."
-  - [Reviewing Classification Approaches in Sentiment Analysis. Yusof, N. N. et al. (2015)](https://doi.org/10.1007/978-981-287-936-3_5).
-    - "... 2000 reviews from online Malay social media and blogs. 1000 positive and 1000 negative reviews. ..."
-  - [Study on Feature Selection and Machine Learning Algorithms For Malay Sentiment Classification. Alsaffar, A. et al. (2014)](https://doi.org/10.1109/icimu.2014.7066643)
-    - "... All models are evaluated on the basis of an opinion corpus for Malay (OCM), which was collected from a variety of Web pages about reviews in the Malay language. ..."
-  - [Improving Accuracy in Sentiment Analysis for Malay Language. Arun A. (2016)](https://www.researchgate.net/publication/312068405_Improving_Accuracy_in_Sentiment_Analysis_for_Malay_Language)
-    - "... Dataset used was opinion corpus for Malay (OCM), which was collected from a variety of Web pages about reviews in the Malay language. ...."
-  - [Sentiment Analysis of Malay Social Media Text. Khalifa C. et al. (2018)](https://doi.org/10.1007/978-981-10-8276-4_20)
-    - "... RojakLex lexicon was constructed consists of 4 different lexicons combined together, namely (1) MySentiDic: a Malay lexicon, (2) English Lexicon: Translated version of MySentiDic, (3) Emoticon lexicon: a combination of 9 different well known lists of commonly used online emoticons, (4) Neologism lexicon: consists of common neologism words used in Malay social media text. ..."
-  - [Enhanced Malay sentiment analysis with an ensemble classification machine learning approach. Al-Moslmi, T. et al. (2017)](https://ukm.pure.elsevier.com/en/publications/enhanced-malay-sentiment-analysis-with-an-ensemble-classification)
-    - "... A wide range of ensemble experiments are conducted on a Malay Opinion Corpus (MOC). ..."
-
-From a quick literature review through these papers, it looks like the common corpus used was the Malay Opinion Corpus (MOC). I have checked that Malay Reviews Corpus (MRC) is the same as MOC. This corpus contains 2000 movie reviews collected from different web pages and blogs in Malay; 1000 of them are considered positive reviews, and the other 1000 are considered negative. It's a small dataset. There's another not so common corpus known as RojakLex and I think this should be a larger corpus. I have contacted the paper's first author to see if it is possible to get a copy of this corpus.
-
 ## TODO
 
 - [x] Download and extract Malay Wikipedia corpus
@@ -136,17 +155,30 @@ From a quick literature review through these papers, it looks like the common co
 - [x] Train model
 - [x] Tune hyper-paramters
 - [x] Evaluate language model
-- [ ] Bug fixes
-  - [ ] Figure out why the model state that's being reset before every inference is remembering the previous generated sentences
-- [ ] Fine-tune language model for text classification task
-- [ ] Build model for text classification
-- [ ] Find curated or publicly available labelled dataset for Malay corpus
-- [ ] Create my own dataset by curating and labelling Malay text scrapped from news sites
-- [ ] Benchmark model for text classification
-- [ ] Use continuous cache pointer (from here: https://github.com/salesforce/awd-lstm-lm)
-- [ ] Try QRNN (from here: https://github.com/salesforce/pytorch-qrnn/)
-- [ ] Identify new datasets for sentiment analysis
+- [x] Bug fixes
+  - [x] Figure out why the model state that's being reset before every inference is remembering the previous generated sentences
+- [x] Fine-tune language model for text classification task
+- [x] Build model for text classification
+- [x] Find curated or publicly available labelled dataset for Malay corpus
+- [ ] ~~Create my own dataset by curating and labelling Malay text scrapped from news sites~~
+- [x] Benchmark model for text classification
+- [ ] ~~Use continuous cache pointer (from here: https://github.com/salesforce/awd-lstm-lm)~~
+- [ ] ~~Try QRNN (from here: https://github.com/salesforce/pytorch-qrnn/)~~
+- [x] Identify new datasets for sentiment analysis
+- [ ] Share text classification pre-trained model and weights
 
 ## License
 
-MIT. Copyright 2018 Cedric Chee.
+This repository contains a variety of content; some developed by Cedric Chee, and some from third-parties. The third-party content is distributed under the license provided by those parties.
+
+*I am providing code and resources in this repository to you under an open source license.  Because this is my personal repository, the license you receive to my code and resources is from me and not my employer.*
+
+The content developed by Cedric Chee is distributed under the following license:
+
+### Code
+
+The code in this repository, including all code samples in the notebooks listed above, is released under the [MIT license](../../../LICENSE). Read more at the [Open Source Initiative](https://opensource.org/licenses/MIT).
+
+### Text
+
+The text content of the book is released under the CC-BY-NC-ND license. Read more at [Creative Commons](https://creativecommons.org/licenses/by-nc-nd/3.0/us/legalcode).

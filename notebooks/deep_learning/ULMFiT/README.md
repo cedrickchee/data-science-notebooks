@@ -30,7 +30,7 @@ My workflow is as follows:
 - Evaluate model based on perplexity and eyeballing
 - Get embeddings of dataset from train set
 
-See [`malay_language_model.ipynb`](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/ULMFiT/malay_language_model.ipynb) notebok for more details.
+See [`malay_language_model.ipynb`](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/ULMFiT/malay_language_model.ipynb) notebook for more details.
 
 For the community to reuse the model directly, I am contributing the Jupyter notebook (and code) together with the pre-trained weights to the [fast.ai model zoo](https://forums.fast.ai/t/language-model-zoo-gorilla/14623).
 
@@ -69,7 +69,7 @@ Model              | Metric        | Value
 [5]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/luong-split.ipynb
 [6]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/hierarchical-split.ipynb
 [7]: https://nbviewer.jupyter.org/github/DevconX/Malaya/blob/master/session/sentiment/fast-text-split.ipynb
-[8]: https://github.com/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/ULMFiT/malay_text_classification.ipynb
+[8]: https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/ULMFiT/malay_text_classification.ipynb
 
 It shows that text classification using ULMFiT outperforms other algorithms using classical machine learning or other neural network models.
 

@@ -1,6 +1,6 @@
 # ULMFiT Language Model for Malay Language
 
-State-of-the-Art Language Modeling and text classifiction in Malay language with perplexity of **29.30245** on Malay Wikipedia and **77.5% accuracy** on [Malaya sentiment analysis](https://github.com/DevconX/Malaya/wiki/Models-Comparison#sentiment_analysis).
+State-of-the-Art Language Modeling and text classification in Malay language with perplexity of **29.30245** on Malay Wikipedia and **77.5% accuracy** on [Malaya sentiment analysis](https://github.com/DevconX/Malaya/wiki/Models-Comparison#sentiment_analysis).
 
 ## The Project
 
@@ -30,7 +30,7 @@ My workflow is as follows:
 - Evaluate model based on perplexity and eyeballing
 - Get embeddings of dataset from train set
 
-See [`malay_language_model.ipynb`](malay_language_model.ipynb) notebok for more details.
+See [`malay_language_model.ipynb`](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/ULMFiT/malay_language_model.ipynb) notebok for more details.
 
 For the community to reuse the model directly, I am contributing the Jupyter notebook (and code) together with the pre-trained weights to the [fast.ai model zoo](https://forums.fast.ai/t/language-model-zoo-gorilla/14623).
 

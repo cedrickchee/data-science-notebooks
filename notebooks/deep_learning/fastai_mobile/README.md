@@ -12,12 +12,17 @@ Learn how to ship SqueezeNet from PyTorch to Caffe2 + Android/iOS app. Please fo
 1. Get started with an introduction to [Open Neural Network Exchange format (ONNX)](https://onnx.ai/) in this Jupyter [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/onnx_from_pytorch_to_caffe2.ipynb).
 2. Putting it all together. Ship a SqueezeNet from PyTorch to Android. Please take a look at this [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb).
   - Jump to the Android project for AI Camera app tutorial in this [notebook](https://nbviewer.jupyter.org/github/cedrickchee/data-science-notebooks/blob/master/notebooks/deep_learning/fastai_mobile/shipping_squeezenet_from_pytorch_to_android.ipynb#Fast.ai-Mobile-Camera-Project).
-3. Ship a SqueezeNet from PyTorch to iOS (TBD).
+3. ~~Ship a SqueezeNet from PyTorch to iOS (TBD).~~
 
 [Source code for the Android app](https://github.com/cedrickchee/pytorch-android).
 
 **Updates:**
 
+- 2019-01-01:
+  - Fix Android app crashed when we test with ResNet18 or other networks. I have tested the Android OSS fixes with my own ResNet18 pre-trained ImageNet model (`resnet18_init_net_v1.pb` and `resnet18_predict_net_v1.pb` Protobuf files) and the Android app is working fine.
+- 2018-12-31:
+  - PyTorch core maintainers have updated AICamera example to work with latest PyTorch master. Once that PR is merged into PyTorch master, you can use the README below to get a working Android app, including changing the Protobuf with your own `init.pb` / `predict.pb` files.
+  - [Android OSS fixes PR](https://github.com/pytorch/pytorch/pull/15509).
 - 2018-11-05:
   - Notebooks updated with clearer instructions. Added ONNX installation problems, how to troubleshoot and fix the problems.
 - 2018-11-06:
@@ -108,13 +113,14 @@ Quick literature review:
 - [x] Resolve all issues related to Android Studio
 - [x] Android app demo
 - [ ] Research on newer mobile-first computer vision models (objective: inference speed above 30 fps)
-- [ ] iOS app
+- [ ] ~~iOS app~~
 - [ ] Research on improving model accuracy
 - [x] Open source the Android project source code
 - [ ] Write blog post
-- [ ] Fix crashes
+- [x] Fix crashes
 - [ ] Resolve new issues
 - [ ] Make it easier to test with your own deep neural network/model
+- [x] Deploy pre-trained ResNet18 model
 
 ## License
 

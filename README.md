@@ -16,9 +16,10 @@ The essential core libraries that I will be focusing on for working with data ar
   - [Deep Learning](#deep-learning)
     - [Projects](#projects)
     - [DL Assignments, Exercises or Course Works](#dl-assignments-exercises-or-course-works)
-      - [fast.ai's Deep Learning Part 1: Practical Deep Learning for Coders 2018](#fastais-deep-learning-part-1-practical-deep-learning-for-coders-2018)
-      - [fast.ai's Deep Learning Part 2: Cutting Edge Deep Learning for Coders 2017](#fastais-deep-learning-part-2-cutting-edge-deep-learning-for-coders-2017)
-      - [fast.ai's Deep Learning Part 2: Cutting Edge Deep Learning for Coders 2018](#fastais-deep-learning-part-2-cutting-edge-deep-learning-for-coders-2018)
+      - [fast.ai's Deep Learning Part 1: Practical Deep Learning for Coders 2018 (v2): Oct - Dec 2017](#fastais-deep-learning-part-1-practical-deep-learning-for-coders-2018-v2-oct---dec-2017)
+      - [fast.ai's Deep Learning Part 1: Practical Deep Learning for Coders 2019 (v3): Oct - Dec 2018](#fastais-deep-learning-part-1-practical-deep-learning-for-coders-2019-v3-oct---dec-2018)
+      - [fast.ai's Deep Learning Part 2: Cutting Edge Deep Learning for Coders 2017 (v1): Feb - Apr 2017](#fastais-deep-learning-part-2-cutting-edge-deep-learning-for-coders-2017-v1-feb---apr-2017)
+      - [fast.ai's Deep Learning Part 2: Cutting Edge Deep Learning for Coders 2018 (v2): Mar - May 2018](#fastais-deep-learning-part-2-cutting-edge-deep-learning-for-coders-2018-v2-mar---may-2018)
   - [Machine Learning](#machine-learning)
     - [ML Assignments, Exercises or Course Works](#ml-assignments-exercises-or-course-works)
       - [Andrew Ng's "Machine Learning" class on Coursera](#andrew-ngs-%22machine-learning%22-class-on-coursera)
@@ -76,19 +77,33 @@ You can read more about using conda environments in the [Managing Environments](
 
 ### DL Assignments, Exercises or Course Works
 
-#### fast.ai's Deep Learning Part 1: Practical Deep Learning for Coders 2018
+#### fast.ai's Deep Learning Part 1: Practical Deep Learning for Coders 2018 (v2): Oct - Dec 2017
 
 | Notebook | Description |
 | --- | --- |
-| [lesson1](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson1.ipynb), <br /> [lesson1-vgg](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson1-vgg.ipynb), <br /> [lesson1-rxt50](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson1-rxt50.ipynb), <br /> [keras_lesson1](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/keras_lesson1.ipynb) | Lesson 1 - Recognizing Cats and Dogs |
-| [lesson2-image_models](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson2-image_models.ipynb) | Lesson 2 - Improving Your Image Classifier |
-| [lesson3-rossman](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson3-rossman.ipynb) | Lesson 3 - Understanding Convolutions |
-| [lesson4-imdb](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson4-imdb.ipynb) | Lesson 4 - Structured Time Series and Language Models |
-| [lesson5-movielens](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson5-movielens.ipynb) | Lesson 5 - Collaborative Filtering; Inside the Training Loop |
-| [lesson6-rnn](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson6-rnn.ipynb), <br /> [lesson6-sgd](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson6-sgd.ipynb) | Lesson 6 - Interpreting Embeddings; RNNs from Scratch |
-| [lesson7-cifar10](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson7-cifar10.ipynb), <br /> [lesson7-CAM](https://github.com/cedrickchee/fastai/blob/master/courses/dl1/lesson7-CAM.ipynb) | Lesson 7 - ResNets from Scratch |
+| [lesson1](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson1.ipynb), <br /> [lesson1-vgg](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson1-vgg.ipynb), <br /> [lesson1-rxt50](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson1-rxt50.ipynb), <br /> [keras_lesson1](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/keras_lesson1.ipynb) | Lesson 1 - Recognizing Cats and Dogs |
+| [lesson2-image_models](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson2-image_models.ipynb) | Lesson 2 - Improving Your Image Classifier |
+| [lesson3-rossman](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson3-rossman.ipynb) | Lesson 3 - Understanding Convolutions |
+| [lesson4-imdb](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson4-imdb.ipynb) | Lesson 4 - Structured Time Series and Language Models |
+| [lesson5-movielens](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson5-movielens.ipynb) | Lesson 5 - Collaborative Filtering; Inside the Training Loop |
+| [lesson6-rnn](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson6-rnn.ipynb), <br /> [lesson6-sgd](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson6-sgd.ipynb) | Lesson 6 - Interpreting Embeddings; RNNs from Scratch |
+| [lesson7-cifar10](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson7-cifar10.ipynb), <br /> [lesson7-CAM](https://nbviewer.jupyter.org/github/cedrickchee/fastai/blob/master/courses/dl1/lesson7-CAM.ipynb) | Lesson 7 - ResNets from Scratch |
 
-#### fast.ai's Deep Learning Part 2: Cutting Edge Deep Learning for Coders 2017
+#### fast.ai's Deep Learning Part 1: Practical Deep Learning for Coders 2019 (v3): Oct - Dec 2018
+
+[Deep Learning Part 1: 2019 Edition](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-1/2019-edition/README.md)
+
+| Notebook | Description |
+| --- | --- |
+| [00_notebook_tutorial.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/00_notebook_tutorial.ipynb), <br /> [lesson1-pets.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson1-pets_20181023.ipynb) | [Lesson 1 - Image Recognition](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-1/2019-edition/lesson-1-image-recognition.md) |
+| [lesson2-download.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson2-download_20181205.ipynb) <br /> [lesson2-sgd.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson2-sgd_20181207.ipynb) | [Lesson 2 - Computer Vision: Deeper Applications](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-1/2019-edition/lesson-2-deeper-dive-into-cv.md) |
+| [lesson3-planet.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson3-planet_20181210.ipynb) <br /> [lesson3-camvid.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson3-camvid_20181212.ipynb) <br /> [lesson3-head-pose.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson3-head-pose-20181226.ipynb) <br /> [lesson3-imdb.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson3-imdb_20181226.ipynb) | [Lesson 3 - Multi-label, Segmentation, Image Regression, and More](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-1/2019-edition/lesson-3-multilabel-segmentation.md) |
+| [lesson4-tabular.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson4-tabular_20181226.ipynb) <br /> [lesson4-collab.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson4-collab_20181227.ipynb) | [Lesson 4 - NLP, Tabular, and Collaborative Filtering](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-1/2019-edition/lesson-4-nlp-tabular-collab.md) |
+| [lesson5-sgd-mnist.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson5-sgd-mnist-20190104.ipynb) | [Lesson 5 - Foundations of Neural Networks](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-1/2019-edition/lesson-5-foundations-neural-nets.md) |
+| [lesson6-rossmann.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson6-rossmann_20190107.ipynb) <br /> [rossman_data_clean.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/rossman_data_clean_20190107.ipynb) <br /> [lesson6-pets-more.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson6-pets-more_20190105.ipynb) | [Lesson 6 - Foundations of Convolutional Neural Networks](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-1/2019-edition/lesson-6-foundations-convolutional-neural-nets.md) |
+| [lesson7-resnet-mnist.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson7-resnet-mnist_20190108.ipynb) <br /> [lesson7-superres-gan.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson7-superres-gan_20190110.ipynb) <br /> [lesson7-superres-imagenet.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson7-superres-imagenet.ipynb) <br /> [lesson7-superres.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson7-superres_20190110.ipynb) <br /> [lesson7-wgan.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson7-wgan_20190110.ipynb) <br /> [lesson7-human-numbers.ipynb](https://nbviewer.jupyter.org/github/cedrickchee/fastai-course-v3/blob/master/nbs/dl1/lesson7-human-numbers_20190111.ipynb) | [Lesson 7 - ResNets, U-Nets, GANs and RNNs](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-1/2019-edition/lesson-7-resnet-unet-gan-rnn.md) |
+
+#### fast.ai's Deep Learning Part 2: Cutting Edge Deep Learning for Coders 2017 (v1): Feb - Apr 2017
 
 [Deep Learning Part 2: 2017 Edition](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-2/2017-edition/README.md)
 
@@ -102,7 +117,7 @@ You can read more about using conda environments in the [Managing Environments](
 | [translate-pytorch](https://github.com/fastai/courses/blob/master/deeplearning2/translate-pytorch.ipynb), <br /> [densenet-keras](https://github.com/fastai/courses/blob/master/deeplearning2/densenet-keras.ipynb) | [Lesson 13 - Neural Translation](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-2/2017-edition/lesson-13-neural-translation.md) |
 | [rossmann](https://github.com/fastai/courses/blob/master/deeplearning2/rossman.ipynb), <br /> [tiramisu-keras](https://github.com/fastai/courses/blob/master/deeplearning2/tiramisu-keras.ipynb) | [Lesson 14 - Time Series & Segmentation](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-2/2017-edition/lesson-14-time-series-and-segmentation.md) |
 
-#### fast.ai's Deep Learning Part 2: Cutting Edge Deep Learning for Coders 2018
+#### fast.ai's Deep Learning Part 2: Cutting Edge Deep Learning for Coders 2018 (v2): Mar - May 2018
 
 [Deep Learning Part 2: 2018 Edition](https://github.com/cedrickchee/knowledge/blob/master/courses/fast.ai/deep-learning-part-2/2018-edition/README.md)
 

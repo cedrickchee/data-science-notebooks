@@ -81,7 +81,7 @@ Notebooks for trying out transformer and large language models.
 
 |Notebook|Description|
 | --- | --- |
-| [Flan-UL2 20B](/notebooks/deep_learning/deep_painterly_harmonization/harmonization.ipynb) | Flan 20B with UL2 code walkthrough. This shows how you can get it running on 1x A100 40GB GPU with the HuggingFace library and using 8-bit inference. Using CoT, zeroshot (logical reasoning, story writing, common sense reasoning, speech writing). Testing large (2048) token input. |
+| [Flan-UL2 20B](/notebooks/deep_learning/language_models/transformer/Flan-UL2-inference-demo.ipynb) | Flan 20B with UL2 code walkthrough. This shows how you can get it running on 1x A100 40GB GPU with the HuggingFace library and using 8-bit inference. Using CoT, zeroshot (logical reasoning, story writing, common sense reasoning, speech writing). Testing large (2048) token input. |
 
 ### DL Assignments, Exercises or Course Works
 

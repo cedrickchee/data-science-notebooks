@@ -75,6 +75,14 @@ You can read more about using conda environments in the [Managing Environments](
 | [Language modelling in Malay language for downstream NLP tasks](/notebooks/deep_learning/ULMFiT/malay_language_model.ipynb) | Implement [Universal Language Model Fine-tuning for Text Classification (ULMFiT)](http://nlp.fast.ai/classification/2018/05/15/introducting-ulmfit.html) in PyTorch |
 | [Not Hotdog AI Camera mobile app](notebooks/deep_learning/fastai_mobile/README.md) | Asia virtual study group project for fast.ai deep learning part 1, v3 course. Ship a convolutional neural network on Android/iOS with PyTorch and Android Studio/Xcode |
 
+### Language Models
+
+Notebooks for trying out transformer and large language models.
+
+|Notebook|Description|
+| --- | --- |
+| [Flan-UL2 20B](/notebooks/deep_learning/deep_painterly_harmonization/harmonization.ipynb) | Flan 20B with UL2 code walkthrough. This shows how you can get it running on 1x A100 40GB GPU with the HuggingFace library and using 8-bit inference. Using CoT, zeroshot (logical reasoning, story writing, common sense reasoning, speech writing). Testing large (2048) token input. |
+
 ### DL Assignments, Exercises or Course Works
 
 #### fast.ai's Deep Learning Part 1: Practical Deep Learning for Coders 2018 (v2): Oct - Dec 2017
